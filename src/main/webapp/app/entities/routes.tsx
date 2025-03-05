@@ -2,6 +2,7 @@ import React from 'react';
 
 import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 
+import { Route } from 'react-router';
 import Region from './region';
 import Country from './country';
 import Location from './location';
@@ -10,7 +11,6 @@ import Task from './task';
 import Employee from './employee';
 import Job from './job';
 import JobHistory from './job-history';
-import { Route } from 'react-router';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 export default () => {

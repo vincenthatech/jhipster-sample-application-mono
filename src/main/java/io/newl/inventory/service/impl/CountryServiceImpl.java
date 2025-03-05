@@ -5,7 +5,6 @@ import io.newl.inventory.repository.CountryRepository;
 import io.newl.inventory.service.CountryService;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.StreamSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -59,18 +58,6 @@ public class CountryServiceImpl implements CountryService {
     public List<Country> findAll() {
         LOG.debug("Request to get all Countries");
         return countryRepository.findAll();
-    }
-
-    /**
-     *  Get all the countries where Location is {@code null}.
-     *  @return the list of entities.
-     */
-    @Transactional(readOnly = true)
-    public List<Country> findAllWhereLocationIsNull() {
-        LOG.debug("Request to get all countries where Location is null");
-        return StreamSupport.stream(countryRepository.findAll().spliterator(), false)
-            .filter(country -> country.getLocation() == null)
-            .toList();
     }
 
     @Override
