@@ -61,11 +61,11 @@ enum Language {
     FRENCH, ENGLISH, SPANISH
 }
 
-relationship OneToOne {
+relationship ManyToOne {
 	Country{region} to Region
 }
 
-relationship OneToOne {
+relationship ManyToOne {
 	Location{country} to Country
 }
 
