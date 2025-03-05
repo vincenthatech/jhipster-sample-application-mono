@@ -1,4 +1,6 @@
+import MenuItem from 'app/shared/layout/menus/menu-item';
 import React from 'react';
+import { Translate } from 'react-jhipster';
 
 const EntitiesMenu = () => {
   return (
