@@ -129,15 +129,10 @@ public class RegionResource {
     /**
      * {@code GET  /regions} : get all the regions.
      *
-     * @param filter the filter of the request.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of regions in body.
      */
     @GetMapping("")
-    public List<Region> getAllRegions(@RequestParam(name = "filter", required = false) String filter) {
-        if ("country-is-null".equals(filter)) {
-            LOG.debug("REST request to get all Regions where country is null");
-            return regionService.findAllWhereCountryIsNull();
-        }
+    public List<Region> getAllRegions() {
         LOG.debug("REST request to get all Regions");
         return regionService.findAll();
     }

@@ -40,13 +40,6 @@ public interface RegionService {
     List<Region> findAll();
 
     /**
-     * Get all the Region where Country is {@code null}.
-     *
-     * @return the {@link List} of entities.
-     */
-    List<Region> findAllWhereCountryIsNull();
-
-    /**
      * Get the "id" region.
      *
      * @param id the id of the entity.

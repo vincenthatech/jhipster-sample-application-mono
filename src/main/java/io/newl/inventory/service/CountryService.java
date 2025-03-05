@@ -40,13 +40,6 @@ public interface CountryService {
     List<Country> findAll();
 
     /**
-     * Get all the Country where Location is {@code null}.
-     *
-     * @return the {@link List} of entities.
-     */
-    List<Country> findAllWhereLocationIsNull();
-
-    /**
      * Get the "id" country.
      *
      * @param id the id of the entity.

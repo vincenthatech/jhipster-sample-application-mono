@@ -15,7 +15,7 @@
       "otherEntityName": "region",
       "relationshipName": "region",
       "relationshipSide": "left",
-      "relationshipType": "one-to-one"
+      "relationshipType": "many-to-one"
     }
   ],
   "searchEngine": "no",

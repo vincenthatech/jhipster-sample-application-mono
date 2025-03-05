@@ -1,7 +1,6 @@
 package io.newl.inventory.domain;
 
 import static io.newl.inventory.domain.CountryTestSamples.*;
-import static io.newl.inventory.domain.LocationTestSamples.*;
 import static io.newl.inventory.domain.RegionTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -34,19 +33,5 @@ class CountryTest {
 
         country.region(null);
         assertThat(country.getRegion()).isNull();
-    }
-
-    @Test
-    void locationTest() {
-        Country country = getCountryRandomSampleGenerator();
-        Location locationBack = getLocationRandomSampleGenerator();
-
-        country.setLocation(locationBack);
-        assertThat(country.getLocation()).isEqualTo(locationBack);
-        assertThat(locationBack.getCountry()).isEqualTo(country);
-
-        country.location(null);
-        assertThat(country.getLocation()).isNull();
-        assertThat(locationBack.getCountry()).isNull();
     }
 }

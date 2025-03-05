@@ -1,6 +1,5 @@
 package io.newl.inventory.domain;
 
-import static io.newl.inventory.domain.CountryTestSamples.*;
 import static io.newl.inventory.domain.RegionTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -21,19 +20,5 @@ class RegionTest {
 
         region2 = getRegionSample2();
         assertThat(region1).isNotEqualTo(region2);
-    }
-
-    @Test
-    void countryTest() {
-        Region region = getRegionRandomSampleGenerator();
-        Country countryBack = getCountryRandomSampleGenerator();
-
-        region.setCountry(countryBack);
-        assertThat(region.getCountry()).isEqualTo(countryBack);
-        assertThat(countryBack.getRegion()).isEqualTo(region);
-
-        region.country(null);
-        assertThat(region.getCountry()).isNull();
-        assertThat(countryBack.getRegion()).isNull();
     }
 }
